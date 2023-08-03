@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mermaid Diagram Renderer</title>
+
+    <style>
+      body {
+        font-family: myriad-pro, Arial, Helvetica, sans-serif;
+      }
+      h2 {
+        color: #004165;
+      }
+      /* Some basic styling for the divs */
+      #inputDiv {
+        width: 50%;
+        float: left;
+      }
+      #outputDiv {
+        width: 50%;
+        float: left;
+      }
+      button {
+        color: #0072ac;
+        padding: 0.625rem 1rem;
+        border-radius: 3px;
+        background: #fff;
+        border: 1px solid #0072ac;
+      }
+      button:hover {
+        background-color: #008dd4;
+        color: #fff;
+      }
+
+      /* Banner styles */
+      .banner {
+        background-color: #004165;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+      }
+
+      /* Style for the logo */
+      .logo img {
+        width: 100px;
+        height: auto;
+        margin-right: 20px;
+      }
+
+      /* Additional styles for the banner text */
+      .banner-text h1 {
+        font-size: 24px;
+        margin: 0;
+      }
+
+      .banner-text p {
+        font-size: 16px;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="banner">
+      <div class="logo">
+        <img
+          src="https://www.anz.com.au/content/dam/anzconz/images/common/promopages/logo-promo-anz-small.png"
+          alt="ANZ"
+        />
+      </div>
+      <div class="banner-text">
+        <h1>Welcome to GYANZ.AI</h1>
+      </div>
+    </header>
+
+    <!-- <div>
+      <img
+        src="https://www.anz.com.au/content/dam/anzconz/images/common/promopages/logo-promo-anz-small.png"
+        alt="ANZ logo"
+      />
+      GYANZ.AI
+    </div> -->
+    <!-- Two divs: one for input, one for output -->
+    <div id="inputDiv">
+      <h2>Input Mermaid code here:</h2>
+      <textarea id="mermaidCode" rows="10" cols="50"></textarea>
+      <br />
+      <button>Render</button>
+    </div>
+    <div id="outputDiv">
+      <h2>Rendered diagram:</h2>
+      <div class="render_container">
+        <div class="flowchart"></div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector('button').addEventListener('click', async (e) => {
+        const output = document.querySelector('.flowchart');
+        if (output.firstChild !== null) {
+          output.innerHTML = '';
+        }
+        const code = document.querySelector(' textarea').value.trim();
+        // let insert = function (code) {
+        //   output.innerHTML = code;
+        // };
+        // mermaid.render('preparedScheme', code).then(insert);
+        const { svg, bindFunctions } = await mermaid.render(
+          'preparedScheme',
+          code
+        );
+        output.innerHTML = svg;
+      });
+    </script>
+
+    <script src="https://unpkg.com/mermaid@10.3.0/dist/mermaid.min.js"></script>
+    <!-- <script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script> -->
+    <!-- <script src="
+https://cdn.jsdelivr.net/npm/mermaid@10.3.0/dist/mermaid.min.js
+"></script> -->
+  </body>
+</html>
