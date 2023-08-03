@@ -9,6 +9,61 @@
     <link rel="stylesheet" href="dist/css/style.css">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
+<style>
+      body {
+        font-family: myriad-pro, Arial, Helvetica, sans-serif;
+      }
+      h2 {
+        color: #004165;
+      }
+      /* Some basic styling for the divs */
+      #inputDiv {
+        width: 50%;
+        float: left;
+      }
+      #outputDiv {
+        width: 50%;
+        float: left;
+      }
+      button {
+        color: #0072ac;
+        padding: 0.625rem 1rem;
+        border-radius: 3px;
+        background: #fff;
+        border: 1px solid #0072ac;
+      }
+      button:hover {
+        background-color: #008dd4;
+        color: #fff;
+      }
+
+      /* Banner styles */
+      .banner {
+        background-color: #004165;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+      }
+
+      /* Style for the logo */
+      .logo img {
+        width: 100px;
+        height: auto;
+        margin-right: 20px;
+      }
+
+      /* Additional styles for the banner text */
+      .banner-text h1 {
+        font-size: 24px;
+        margin: 0;
+      }
+
+      .banner-text p {
+        font-size: 16px;
+        margin: 5px 0;
+      }
+    </style>
 <body class="is-boxed">
     <div class="body-wrap boxed-container">
         <header class="site-header">
@@ -16,32 +71,12 @@
                 <div class="site-header-inner">
                     <div class="brand header-brand">
                         <h1 class="m-0">
-                            <a href="#">
-								<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-								    <title>Gyanz.ai</title>
-								    <defs>
-								        <linearGradient x1="0%" y1="0%" y2="100%" id="logo-a">
-								            <stop stop-color="#4353FF" offset="0%"/>
-								            <stop stop-color="#4353FF" stop-opacity=".32" offset="100%"/>
-								        </linearGradient>
-								        <linearGradient x1="0%" y1="0%" y2="100%" id="logo-b">
-								            <stop stop-color="#4353FF" offset="0%"/>
-								            <stop stop-color="#4353FF" stop-opacity=".32" offset="100%"/>
-								        </linearGradient>
-								        <linearGradient x1="0%" y1="0%" y2="100%" id="logo-c">
-								            <stop stop-color="#78F9FF" stop-opacity=".24" offset="0%"/>
-								            <stop stop-color="#43F1FF" offset="55.496%"/>
-								            <stop stop-color="#43F1FF" stop-opacity=".24" offset="100%"/>
-								        </linearGradient>
-								    </defs>
-								    <g fill="none" fill-rule="evenodd">
-								        <path d="M4 0h12v16H0V4a4 4 0 0 1 4-4z" fill="url(#logo-a)"/>
-								        <path d="M16 16h16v12a4 4 0 0 1-4 4H16V16z" fill="url(#logo-b)"/>
-								        <path d="M11.5 20.5H.5v1h10v10h1v-11z" stroke="url(#logo-c)" transform="matrix(-1 0 0 1 12 0)"/>
-								        <path d="M31.5.5h-11v1h10v10h1V.5z" stroke="url(#logo-c)" transform="matrix(1 0 0 -1 0 12)"/>
-								    </g>
-								</svg>
-                            </a>
+                            <div class="logo">
+        <img
+          src="https://www.anz.com.au/content/dam/anzconz/images/common/promopages/logo-promo-anz-small.png"
+          alt="ANZ"
+        />
+      </div>
                         </h1>
                     </div>
                 </div>
@@ -426,7 +461,7 @@
 	<script>
 var url1 = "https://www.google.com";
 var url2 = "https://www.msn.com";
-var url3 = "https://www.github.com";
+var url3 = "mermaid.html";
 var link1 = document.getElementById('LINK1');
 link1.href=url1;
 
