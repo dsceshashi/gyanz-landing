@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>GYANZ.AI</title>
+    <title>GYANZ.AI - Mermaid</title>
     <link
       rel="icon"
       type="image/png"
@@ -18,12 +18,12 @@
       }
       /* Some basic styling for the divs */
       #inputDiv {
-        width: 50%;
-        float: left;
+        text-align: center;
       }
       #outputDiv {
-        width: 50%;
-        float: left;
+        text-align: center;
+        display: none;
+        margin-top: 35px;
       }
       button {
         color: #0072ac;
@@ -31,6 +31,7 @@
         border-radius: 3px;
         background: #fff;
         border: 1px solid #0072ac;
+        cursor: pointer;
       }
       button:hover {
         background-color: #008dd4;
@@ -63,6 +64,11 @@
         font-size: 16px;
         margin: 5px 0;
       }
+
+      .render-button {
+        position: relative;
+        top: 20px;
+      }
     </style>
   </head>
   <body>
@@ -82,7 +88,7 @@
       <h2>Input Mermaid code here:</h2>
       <textarea id="mermaidCode" rows="10" cols="50"></textarea>
       <br />
-      <button>Render</button>
+      <button class="render-button">Render</button>
     </div>
     <div id="outputDiv">
       <h2>Rendered diagram:</h2>
@@ -93,6 +99,9 @@
 
     <script>
       document.querySelector('button').addEventListener('click', async (e) => {
+        document
+          .querySelector('#outputDiv')
+          .setAttribute('style', 'display:block');
         const output = document.querySelector('.flowchart');
         if (output.firstChild !== null) {
           output.innerHTML = '';

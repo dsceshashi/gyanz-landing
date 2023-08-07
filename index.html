@@ -377,24 +377,7 @@
 											    </g>
 											</svg>
 		                                </div>
-		                                <h4 class="feature-title m-0"><a id="LINK1" href="#" target="_blank" style="text-decoration:none">Interactive Q&A, Document Summarization, and Audio Experience (FALCON-7b-Model)</a></h4>
-									</div>
-	                                <p class="text-sm mb-0"></p>
-	                            </div>
-	                        </div>
-							<div class="feature">
-	                            <div class="feature-inner">
-									<div class="feature-header mb-16">
-										<div class="feature-icon mr-16">
-											<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-											    <g fill-rule="nonzero" fill="none">
-											        <path d="M4 12H0V5a5.006 5.006 0 0 1 5-5h7v4H5a1 1 0 0 0-1 1v7z" fill="#43F1FF"/>
-											        <path d="M32 12h-4V5a1 1 0 0 0-1-1h-7V0h7a5.006 5.006 0 0 1 5 5v7zM12 32H5a5.006 5.006 0 0 1-5-5v-7h4v7a1 1 0 0 0 1 1h7v4z" fill="#4353FF"/>
-											        <path d="M27 32h-7v-4h7a1 1 0 0 0 1-1v-7h4v7a5.006 5.006 0 0 1-5 5z" fill="#43F1FF"/>
-											    </g>
-											</svg>
-		                                </div>
-		                                <h4 class="feature-title m-0"><a id="LINK2" href="#" target="_blank" style="text-decoration:none">Automated short/video content creation.(OPEN AI)</a></h4>
+		                                <h4 class="feature-title m-0"><a id="falcon7bModelDocumentGPT" href="#" target="_blank" style="text-decoration:none">Interactive Q&A, Document Summarization, and Audio Experience (FALCON-7b-Model)</a></h4>
 									</div>
 	                                <p class="text-sm mb-0"></p>
 	                            </div>
@@ -413,10 +396,28 @@
 											    </g>
 											</svg>
 		                                </div>
-		                                <h4 class="feature-title m-0"><a id="LINK3" href="#" target="_blank" style="text-decoration:none">Dynamic Diagrams and Visualizations (OPEN AI + Mermaid JS)</a></h4>
+		                                <h4 class="feature-title m-0">Dynamic Diagrams and Visualizations (<a id="openAIDocumentGPT" href="#" target="_blank" style="text-decoration:none">OPEN AI</a> + <a id="mermaidHtml" href="#" target="_blank" style="text-decoration:none">Mermaid JS</a>)</h4>
 									</div>	                                
 	                            </div>
 	                        </div>
+							<div class="feature">
+	                            <div class="feature-inner">
+									<div class="feature-header mb-16">
+										<div class="feature-icon mr-16">
+											<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+											    <g fill-rule="nonzero" fill="none">
+											        <path d="M4 12H0V5a5.006 5.006 0 0 1 5-5h7v4H5a1 1 0 0 0-1 1v7z" fill="#43F1FF"/>
+											        <path d="M32 12h-4V5a1 1 0 0 0-1-1h-7V0h7a5.006 5.006 0 0 1 5 5v7zM12 32H5a5.006 5.006 0 0 1-5-5v-7h4v7a1 1 0 0 0 1 1h7v4z" fill="#4353FF"/>
+											        <path d="M27 32h-7v-4h7a1 1 0 0 0 1-1v-7h4v7a5.006 5.006 0 0 1-5 5z" fill="#43F1FF"/>
+											    </g>
+											</svg>
+		                                </div>
+		                                <h4 class="feature-title m-0"><a id="videoGPT" href="#" target="_blank" style="text-decoration:none">Automated short/video content creation.(OPEN AI)</a></h4>
+									</div>
+	                                <p class="text-sm mb-0"></p>
+	                            </div>
+	                        </div>
+							
 						</div>
                     </div>
                 </div>
@@ -459,17 +460,24 @@
 
     <script src="dist/js/main.min.js"></script>
 	<script>
-var url1 = "https://www.google.com";
-var url2 = "https://www.msn.com";
-var url3 = "mermaid.html";
-var link1 = document.getElementById('LINK1');
-link1.href=url1;
+var falcon7bModelDocumentGPT = "https://www.google.com";
+var openAIDocumentGPT = "https://7750f7c7cf26f73fc6.gradio.live/"
+var mermaidHtml = "mermaid.html"
+var videoGPT = "mermaid.html";
 
-var link2 = document.getElementById('LINK2');
-link2.href=url2;
+var falcon7bModelDocumentGPTLink = document.getElementById('falcon7bModelDocumentGPT');
+falcon7bModelDocumentGPTLink.href=falcon7bModelDocumentGPT;
 
-var link3 = document.getElementById('LINK3');
-link3.href=url3;
+var openAIDocumentGPTLink = document.getElementById('openAIDocumentGPT');
+openAIDocumentGPTLink.href=openAIDocumentGPT;
+
+var mermaidHtmlLink = document.getElementById('mermaidHtml');
+mermaidHtmlLink.href=mermaidHtml;
+
+var videoGPTLink = document.getElementById('videoGPT');
+videoGPTLink.href=videoGPT;
+
+
 </script>
 </body>
 </html>
