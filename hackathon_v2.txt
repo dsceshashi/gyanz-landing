@@ -1,0 +1,94 @@
+
+falcon 7b model - POD1
+
+apt-get update
+apt-get install -y vim
+
+
+#!/bin/bash
+
+apt-get update
+apt-get install -y ffmpeg
+git clone https://github.com/ramki982/h2ogpt.git
+cd h2ogpt
+pip install -r requirements.txt --extra-index https://download.pytorch.org/whl/cu118
+pip install -r reqs_optional/requirements_optional_langchain.txt
+pip install -r reqs_optional/requirements_optional_langchain.gpllike.txt
+python -m nltk.downloader all
+
+Open AI h20gpt - POD2
+
+apt-get update
+apt-get install -y vim
+
+
+#!/bin/bash
+
+apt-get update
+apt-get install -y ffmpeg
+git clone https://github.com/ramki982/h2ogpt.git
+cd h2ogpt
+pip install -r requirements.txt --extra-index https://download.pytorch.org/whl/cu118
+pip install -r reqs_optional/requirements_optional_langchain.txt
+pip install -r reqs_optional/requirements_optional_langchain.gpllike.txt
+python -m nltk.downloader all
+
+
+python generate.py --inference_server="openai_chat" -base_model=gpt-3.5-turbo --share=True
+
+python generate.py --base_model=h2oai/h2ogpt-gm-oasst1-en-2048-falcon-7b-v3 --langchain_mode=UserData --score_model=None --share=True
+
+
+python generate.py --base_model=mosaicml/mpt-30b-chat --langchain_mode=UserData --score_model=None --share=True
+
+python generate.py --base_model=h2oai/h2ogpt-oasst1-512-12b --load_8bit=True  --score_model=None --langchain_mode='UserData' --share=True
+
+
+
+mosaicml/mpt-30b-chat
+
+
+Tab 1 - landing page
+Tab 2- h2ogpt- 7b model
+Tab 3 - h2ogpt open ai
+Tab 4 - Mermaid js page
+Tab 5 - Keep other examples of mermaid js
+
+----Execution--- h20gpt falcon-7b-v3
+
+1. upload annualreport.pdf
+
+2. Ask Questions
+what is the total revenue from external customers?
+which city corportate office is located?
+what was net profit after tax in year 2022
+
+3. Upload bloomfilter.mp3
+
+what is bloomfilter?
+
+--Execution---h2ogpt open ai
+
+1. switch to tab 3
+2. can you give a sequence diagram for oauth based authentication in mermaid js format?
+3. Copy and paste in Mermaid js page
+
+--Execution - shortgpt - 
+
+1. Hand over to Ram - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
