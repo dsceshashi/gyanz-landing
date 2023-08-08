@@ -1,0 +1,12 @@
+Questions to be asked
+
+what is the total revenue from external customers?
+which city corportate office is located?
+what was net profit after tax in year 2022
+
+what is bloom filter?
+
+can you generate the sequence diagram for oauth based authentication in mermaid format?
+
+
+
